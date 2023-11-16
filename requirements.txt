@@ -9,7 +9,7 @@ WTForms==3.0.0
 requests==2.30.0
 packaging==23.0
 crcmod==1.7
-gevent==22.10.2
+gevent==23.9.0
 watchdog==3.0.0
 sqlalchemy==2.0.13
 sqlalchemy_serializer==1.4.1
