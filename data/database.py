@@ -3,7 +3,7 @@
 
 import sqlalchemy as sa
 import sqlalchemy.orm as orm
-from sqlalchemy.orm import Session, scoped_session, sessionmaker
+from sqlalchemy.orm import Session
 import sqlalchemy.ext.declarative as dec
 from loguru import logger
 
@@ -31,12 +31,7 @@ def global_init(db_file):
 def create_session() -> Session:
     global __factory
     return __factory()
-    # conn_str = f'sqlite:///{__db_file.strip()}?check_same_thread=False'
-    # engine = sa.create_engine(conn_str, echo=True)
-    # # session = Session(bind=engine, autocommit=True)
-    # Session = sessionmaker(bind=engine)
-    # session = Session()
-    # return session
+
 
 
 def create_readonly_ssession() -> Session:
